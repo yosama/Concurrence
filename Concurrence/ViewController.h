@@ -11,5 +11,14 @@
 @interface ViewController : UIViewController
 
 
+
+@property (weak, nonatomic) IBOutlet UIImageView *photo;
+
+
+
+-(IBAction) sincrono:(id)sender;
+-(IBAction) asincrono :(id) sender;
+-(IBAction) asincronoPro :(id) sender;
+
 @end
 
