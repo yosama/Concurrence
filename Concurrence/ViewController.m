@@ -28,7 +28,7 @@
 
 -(IBAction) sincrono:(id)sender {
     
-    NSURL *url = [NSURL URLWithString:@"http://img2.ruliweb.daum.net/mypi/gup/120/1772_2.jpg"];
+    NSURL *url = [NSURL URLWithString:@"http://olap.com/wp-content/uploads/2013/11/bigstock-Big-data-concept-in-word-tag-c-49922318.jpg"];
     
     NSData *imgData = [NSData dataWithContentsOfURL:url];
     
@@ -42,13 +42,13 @@
 -(IBAction) asincrono :(id) sender {
     
     // Create a queue
-    dispatch_queue_t gemelas = dispatch_queue_create("com.yos.concurrencia.cola1", 0);
+    dispatch_queue_t queue = dispatch_queue_create("com.yos.concurrencia.cola1", 0);
     
     // le mando el bloque
-    dispatch_async(gemelas, ^ {
+    dispatch_async(queue, ^ {
         
         
-        NSURL *url = [NSURL URLWithString:@"http://img2.ruliweb.daum.net/mypi/gup/120/1772_2.jpg"];
+        NSURL *url = [NSURL URLWithString:@"http://olap.com/wp-content/uploads/2013/11/bigstock-Big-data-concept-in-word-tag-c-49922318.jpg"];
         
         NSData *imgData = [NSData dataWithContentsOfURL:url];
         
@@ -80,7 +80,7 @@
     
     dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0), ^ {
         
-        NSURL *url = [NSURL URLWithString:@"http://img2.ruliweb.daum.net/mypi/gup/120/1772_2.jpg"];
+        NSURL *url = [NSURL URLWithString:@"http://olap.com/wp-content/uploads/2013/11/bigstock-Big-data-concept-in-word-tag-c-49922318.jpg"];
         
         NSData *imgData = [NSData dataWithContentsOfURL:url];
         
